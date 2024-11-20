@@ -1,0 +1,9 @@
+#root {
+  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.expanded {
+  box-shadow: 0px 3px 3px 4px rgba(255, 194, 104, 0.7);
+}
