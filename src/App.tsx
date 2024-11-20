@@ -19,7 +19,7 @@ function App() {
   const [selectedRoute, setSelectedRoute] = useState<TROUTE>(routes[1]);
   const [scrollTop, setScrollTop] = useState<boolean>(false);
 
-  const myRef = useRef(null);
+  const myRef = useRef<HTMLDivElement | null>(null);
 
   const { isLoaded, onLoad, onUnmount } = useMapHook({ selectedRoute });
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
@@ -28,9 +28,7 @@ function App() {
 
   const executeScroll = () => {
     if (!myRef || !myRef.current) return;
-    if (myRef && myRef.current) {
-      myRef.current.scrollIntoView({ behavior: "smooth" });
-    }
+    myRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   const handleChangeRoute = (route: TROUTE) => {
