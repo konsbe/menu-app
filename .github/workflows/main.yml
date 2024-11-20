@@ -24,9 +24,9 @@ jobs:
 
       - name: Set environment variables
         run: |
-          echo "NEXT_PUBLIC_GOOGLE_API_KEY=${{ secrets.NEXT_PUBLIC_GOOGLE_API_KEY }}" >> $GITHUB_ENV
-          echo "NEXT_PUBLIC_GOOGLE_MAP_API_KEY=${{ secrets.NEXT_PUBLIC_GOOGLE_MAP_API_KEY }}" >> $GITHUB_ENV
-          echo "NEXT_PUBLIC_GOOGLE_SHEET_ID=${{ secrets.NEXT_PUBLIC_GOOGLE_SHEET_ID }}" >> $GITHUB_ENV
+          echo "VITE_PUBLIC_GOOGLE_API_KEY=${{ secrets.VITE_PUBLIC_GOOGLE_API_KEY }}" >> $GITHUB_ENV
+          echo "VITE_PUBLIC_GOOGLE_MAP_API_KEY=${{ secrets.VITE_PUBLIC_GOOGLE_MAP_API_KEY }}" >> $GITHUB_ENV
+          echo "VITE_PUBLIC_GOOGLE_SHEET_ID=${{ secrets.VITE_PUBLIC_GOOGLE_SHEET_ID }}" >> $GITHUB_ENV
 
       - name: Build project
         run: npm run build

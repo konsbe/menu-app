@@ -5,7 +5,7 @@ import { TROUTE } from "../routes";
 const useMapHook = ({ selectedRoute }: { selectedRoute: TROUTE }) => {
   const { isLoaded } = useJsApiLoader({
     id: "google-map-script",
-    googleMapsApiKey: process.env.NEXT_PUBLIC_GOOGLE_MAP_API_KEY || "",
+    googleMapsApiKey: process.env.VITE_PUBLIC_GOOGLE_MAP_API_KEY || "",
   });
 
   const [localMap, setLocalMap] = useState<google.maps.Map | null>(null);

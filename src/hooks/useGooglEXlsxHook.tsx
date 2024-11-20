@@ -7,11 +7,11 @@ interface SheetData {
 
 const useGooglEXlsxHook = () => {
   const [data, setData] = useState<SheetData[]>([]);
-  
+
   const readGoogleSheets = async (): Promise<SheetData[]> => {
-    const sheetId = process.env.NEXT_PUBLIC_GOOGLE_SHEET_ID;
+    const sheetId = process.env.VITE_PUBLIC_GOOGLE_SHEET_ID;
     // useGoogleDriveAPI();
-      const API_KEY = process.env.NEXT_PUBLIC_GOOGLE_API_KEY;
+    const API_KEY = process.env.VITE_PUBLIC_GOOGLE_API_KEY;
 
     const url = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}?fields=sheets.properties.title,sheets.data.rowData.values&key=${API_KEY}`;
 
