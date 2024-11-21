@@ -23,9 +23,10 @@ jobs:
         uses: bahmutov/npm-install@v1
 
       - name: Set environment variables
-        run: echo "VITE_PUBLIC_GOOGLE_API_KEY=${{ secrets.VITE_PUBLIC_GOOGLE_API_KEY }}" >> $GITHUB_ENV
-        run: echo "VITE_PUBLIC_GOOGLE_MAP_API_KEY=${{ secrets.VITE_PUBLIC_GOOGLE_MAP_API_KEY }}" >> $GITHUB_ENV
-        run: echo "VITE_PUBLIC_GOOGLE_SHEET_ID=${{ secrets.VITE_PUBLIC_GOOGLE_SHEET_ID }}" >> $GITHUB_ENV
+        run: |
+          echo "VITE_PUBLIC_GOOGLE_API_KEY=${{ secrets.VITE_PUBLIC_GOOGLE_API_KEY }}" >> $GITHUB_ENV
+          echo "VITE_PUBLIC_GOOGLE_SHEET_ID=${{ secrets.VITE_PUBLIC_GOOGLE_SHEET_ID }}" >> $GITHUB_ENV
+          echo "VITE_PUBLIC_GOOGLE_MAP_API_KEY=${{ secrets.VITE_PUBLIC_GOOGLE_MAP_API_KEY }}" >> $GITHUB_ENV
 
       - name: Build project
         run: npm run build
