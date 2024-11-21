@@ -39,7 +39,7 @@ const MenuDropdown = ({ menu }: { menu: TMENU | any }) => {
                     <div key={index} className="menu-item">
                       <div className="item-name">{item.name}</div>
                       <span className="item-dots"></span>
-                      <span className="item-value">${item.value}</span>
+                      <div className="item-value">${item.value}</div>
                     </div>
                   ) : null
                 )}
