@@ -37,7 +37,7 @@ const MenuDropdown = ({ menu }: { menu: TMENU | any }) => {
                 {menu[sectionKey].map((item: TMENUITEM, index: number) =>
                   item.name ? (
                     <div key={index} className="menu-item">
-                      <span className="item-name">{item.name}</span>
+                      <div className="item-name">{item.name}</div>
                       <span className="item-dots"></span>
                       <span className="item-value">${item.value}</span>
                     </div>
